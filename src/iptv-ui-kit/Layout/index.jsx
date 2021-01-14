@@ -27,7 +27,9 @@ const Container = styled.div`
   flex-direction: column;
 
   main {
+    padding: 0 25px;
     flex: 1 0 auto;
+    display: flex;
   }
 `;
 

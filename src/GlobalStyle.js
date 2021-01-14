@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     background: linear-gradient(89.8deg, #141E30 0.17%, #243B55 99.83%);
     font-family: Montserrat-Regular;
     color: white;
