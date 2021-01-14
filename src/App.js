@@ -6,7 +6,7 @@ import { getChannels } from "api";
 import { useEffect, useState } from "react";
 
 const App = () => {
-  const { data, isLoading, error } = useQuery("getChannels", getChannels);
+  const { data, isLoading } = useQuery("getChannels", getChannels);
   const [defaultChannel, setDefaultChannel] = useState({});
 
   useEffect(() => {
