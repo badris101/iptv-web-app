@@ -1,14 +1,15 @@
 import ReactPlayer from "react-player";
 import styled from "styled-components";
 
-const Player = () => {
+const Player = ({ defaultChannel }) => {
   return (
     <ContainerPlayer>
       <ReactPlayer
+        playing={true}
         width="100%"
-        height="100%"
-        controls="true"
-        url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+        height="788px"
+        controls={true}
+        url={defaultChannel.url}
       />
     </ContainerPlayer>
   );

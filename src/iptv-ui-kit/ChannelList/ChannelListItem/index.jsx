@@ -1,15 +1,18 @@
 import styled from "styled-components";
-import Play from "iptv-ui-kit/assets/Svg/Play";
 
-const ChannelListItem = () => {
+const ChannelListItem = ({
+  channel,
+  index,
+  selected,
+  handleSelectedChannel,
+}) => {
   return (
-    <ItemContainer>
-      <ItemIndex>
-        <span>01</span>
+    <ItemContainer selected={selected} onClick={handleSelectedChannel}>
+      <ItemIndex selected={selected}>
+        <span>{index}</span>
       </ItemIndex>
       <ItemName>
-        <span>Name</span>
-        <Play />
+        <span>{channel.name}</span>
       </ItemName>
     </ItemContainer>
   );
@@ -18,6 +21,8 @@ const ChannelListItem = () => {
 const ItemContainer = styled.div`
   display: flex;
   height: 80px;
+  background: ${({ selected }) => (selected ? "#d6e4f5" : "white")};
+  cursor: pointer;
 `;
 
 const ItemIndex = styled.div`
@@ -27,7 +32,7 @@ const ItemIndex = styled.div`
   align-items: center;
   font-size: 20px;
   font-weight: bold;
-  background: #5e7fa9;
+  background: ${({ selected }) => (selected ? "#a0b6d0" : "#5e7fa9")};
   color: white;
 `;
 
