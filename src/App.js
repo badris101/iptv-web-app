@@ -9,6 +9,8 @@ const App = () => {
   const { data, isLoading } = useQuery("getChannels", getChannels);
   const [defaultChannel, setDefaultChannel] = useState({});
 
+  console.log("data", { data });
+
   useEffect(() => {
     if (data && data.length > 0) {
       setDefaultChannel(data[0]);
