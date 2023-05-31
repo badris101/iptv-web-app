@@ -9,7 +9,17 @@ const Layout = ({ children }) => {
       </Header>
       <main>{children}</main>
       <Footer>
-        <span>© IPTV, Inc. 2021. We love our users!</span>
+        <span>
+          © IPTV, Inc. 2021. We{" "}
+          <a href="https://dl.downloadly.ir/Files/Elearning/FrontendMasters_SVG_Essentials_Animation_v2_2019-1.part1_Downloadly.ir.rar">
+            love
+          </a>
+          our{" "}
+          <a href="https://dl.downloadly.ir/Files/Elearning/FrontendMasters_SVG_Essentials_Animation_v2_2019-1.part2_Downloadly.ir.rar">
+            users
+          </a>
+          !
+        </span>
       </Footer>
     </Container>
   );
